@@ -1,0 +1,155 @@
+.header {
+  position: fixed;
+  width: 100%;
+  height: 102px;
+  left: 0px;
+  top: 0px;
+  z-index: 200;
+  
+
+  background: #FFFFFF;
+  box-shadow: 0px 4px 15px 2px rgba(0, 0, 0, 0.15);
+
+  &__conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {}
+
+  &__button {
+    width: 147px;
+    height: 53px;
+    background: linear-gradient(93.91deg, #829A5A 0%, #122218 99.1%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  &__menu-button{
+    display: none;
+    height: 40px;
+    width: 40px;
+    //background-color: #d12626;
+    img{
+      height: 40px;
+    }
+  }
+
+  &__line {
+    height: 1px;
+    background-color: #000;
+    display: block;
+    min-width: 10px;
+    flex: 1 1 auto;
+    margin: 0 13px;
+
+  }
+}
+
+.conteiner {}
+
+.nav {
+  transition: all 0.2s ease-in-out;
+  &__list {
+    display: flex;
+    align-items: center;
+    min-width: 400px;
+  }
+
+  &__item {
+    flex-wrap: nowrap;
+  }
+
+  &__link {
+    flex-wrap: nowrap;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: rgba(56, 77, 24, 0.85);
+  }
+}
+
+
+@media (max-width: 850px) {
+  .nav {
+
+    &__list {
+      min-width: 360px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .nav {
+
+    &__list {
+      min-width: 320px;
+    }
+  }
+}
+
+
+ 
+ @media (max-width: 580px){
+  .nav {
+    padding-top: 120px;
+    position: fixed;
+    width: 100%;
+    top: -100%;
+    left: 0px;
+    height: 100vh;
+    z-index: 50;
+    background-color: #000000e1;
+    display: flex;
+    align-items: center;
+
+    &__list {
+      display: block;
+      text-align: center;
+      width: 100%;
+      margin: 30px 0 50px 0;     
+      
+    }
+    &__item {
+      margin: 30px 0;
+      
+    }
+    &__link {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 32px;
+      color: rgba(255, 255, 255, 0.85);
+    }    
+  }
+  .show {
+    top: 0px;
+  }
+  .menu-closed {
+    /* Пpиховати контейнеp за межами екранy */
+    top: 0px;
+  }
+  .header{
+    &__menu-button{
+      display: block;
+    }
+    &__line {
+      background-color: #ffffff;
+     
+    }
+  }
+ }
